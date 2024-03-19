@@ -58,6 +58,6 @@ WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@
 time.sleep(0.2)
 WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="kirimkan"]'))).click()
 time.sleep(1)
-actions.send_keys(Keys.SPACE).perform()
+driver.switchTo().alert().accept();
 time.sleep(1)
 driver.close()
