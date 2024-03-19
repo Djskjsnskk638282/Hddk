@@ -31,6 +31,7 @@ id = "conggacor"
 passw = "cong999"
 # set up the webdriver
 driver = webdriver.Chrome(options=chrome_options)
+driver.maximize_window()
 actions = ActionChains(driver)
 driver.get("https://suhuwaktogel.land/")
 time.sleep(5)
