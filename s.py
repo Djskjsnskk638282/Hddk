@@ -38,7 +38,7 @@ WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@
 time.sleep(0.2)
 WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="navbar_password"]'))).send_keys(passw)
 time.sleep(0.2)
-WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="submitlogin"]'))).click()
+actions.send_keys(Keys.ENTER).perform()
 time.sleep(0.2)
 WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="setuju"]'))).click()
 time.sleep(0.2)
