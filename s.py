@@ -1,4 +1,3 @@
-
 import time
 from selenium.webdriver.common.by import By
 import time
@@ -39,7 +38,7 @@ WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@
 time.sleep(0.2)
 WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="navbar_password"]'))).send_keys(passw)
 time.sleep(0.2)
-actions.send_keys(Keys.ENTER).perform()
+WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="submitlogin"]'))).click()
 time.sleep(0.2)
 pon = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="setuju"]')))
 time.sleep(0.2)
