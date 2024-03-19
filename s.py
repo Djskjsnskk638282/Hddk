@@ -53,7 +53,10 @@ WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@
 time.sleep(0.2)
 WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="content4d"]/div[2]/div[1]/section/div[1]/div[3]'))).click()
 time.sleep(0.2)
-WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="tebak"]'))).send_keys("90")
+numbers = random.sample(range(100), 100)
+formatted_numbers = [f"{num:02d}*" for num in numbers]
+result = ''.join(formatted_numbers[:95]) 
+WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="tebak"]'))).send_keys(result)
 time.sleep(0.2)
 WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="beli-2dset"]'))).send_keys("0.1")
 time.sleep(0.2)
