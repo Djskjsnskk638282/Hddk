@@ -22,6 +22,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from pyvirtualdisplay import Display
+import chromedriver_autoinstaller
 display = Display(visible=0, size=(800, 800))  
 display.start()
 
