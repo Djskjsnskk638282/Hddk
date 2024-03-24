@@ -23,7 +23,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800, 800))  
-display.start()# Check if the current version of chromedriver exists
+display.start()
+
+chromedriver_autoinstaller.install() #Check if the current version of chromedriver exists
                                       # and if it doesn't exist, download it automatically,
                                       # then add chromedriver to path
 
@@ -35,7 +37,7 @@ options = [
     "--ignore-certificate-errors"
  
     "--headless",
-    #"--disable-gpu",
+    "--disable-gpu",
     #"--window-size=1920,1200",
     #"--ignore-certificate-errors",
     #"--disable-extensions",
